@@ -18,9 +18,21 @@
     <ClCompile Include="LK_OOP_2_Famile.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Point05_02.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Point05_02.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\ГЕОМЕТРИЧЕСКИЕ ФИГУРЫ\EX05_02\EX05_02\Text.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\ГЕОМЕТРИЧЕСКИЕ ФИГУРЫ\EX05_02\EX05_02\HWnd.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\ГЕОМЕТРИЧЕСКИЕ ФИГУРЫ\EX05_02\EX05_02\TX18X16.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

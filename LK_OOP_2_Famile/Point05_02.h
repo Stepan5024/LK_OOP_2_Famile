@@ -12,36 +12,40 @@
 
 class Location
 {
-protected:     //предоставляет возможность потомкам (производному 
-			   //классу) иметь доступ к частным данным
+protected:     // предоставляет возможность потомкам (производному 
+			   // классу) иметь доступ к частным данным
 	int X;
 	int Y;
 
 public:   // эти методы доступны извне всем в программе
 
-	Location(int InitX, int InitY);  //конструктор
-	~Location();                     //деструктор
-	int GetX();
-	int GetY();
+	Location(int InitX, int InitY);  // конструктор
+	~Location();                     // деструктор
+	int GetX();		// получить значение поля X
+	int GetY();		// получить значение поля Y
+	void SetX(int NewX) { X = NewX; }; // установить (изменить) значение поля X
+	void SetY(int NewY) { Y = NewY; }; // установить (изменить) значение поля Y
 }; // class Location
 
 /*-----------------------------------------------------------------------------*/
-class Point : public Location
+class Point : public Location // если не написать public то по умолчанию private - все закрыто
 {
 	// Point - производный класс от Location
 	// атрибут public в объявлении производного класса означает, что X и Y являются 
 	// защищенными (protected) внутри Point - полученными по наследству
 
-protected:         //классам, производным от Point, потребуется доступ public
-	bool Visible;   //светится точка или нет
+protected:         // классам, производным от Point, потребуется доступ public
+	bool Visible;   // светится точка или нет
 
 public:
-	Point(int InitX, int InitY);   //конструктор класса
+	Point(int InitX, int InitY);   //конструктор №1 класса
+	Point(int InitX, int InitY, bool InitVisible);   //конструктор №2 класса
 	~Point();                       //деструктор
-	void Show();
-	void Hide();
-	bool IsVisible();  //узнать про светимость точки
-	void MoveTo(int NewX, int NewY);
-};
+	void Show(); // сделать светимость точки
+	void Hide(); // спрятать видимость точки
+	bool IsVisible();  // узнать про светимость точки
+	void SetVisible(bool NewVisible) { Visible = NewVisible; }; // установить видимость точки
+	void MoveTo(int NewX, int NewY); // поставить новые координаты точке
+}; // class Point
 
 /************************   End of File POINT05_02.H     ********************/
