@@ -49,19 +49,20 @@ int main()
 			cin.get();
 			APoint.MoveTo(230, 250);  //показать точку
 			cin.get();
-
+			int j = 0;
 			while (1) //бесконечный цикл для регенерации экрана
-			{
+			{	
+				j++;
 				for (int i = 0; i < 50; i++)
 				{
 					Sleep(100);
 					APoint.MoveTo(210, 200 + i);//переместиться в точку
 				} //for
+				if (j == 50) j = 0;
 			} //while
 		}
 	}
 
-	getchar();
 }//end main()
 
 HWND GetConcolWindow() {

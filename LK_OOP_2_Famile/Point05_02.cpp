@@ -38,7 +38,9 @@ Point::Point(int InitX, int InitY) : Location(InitX, InitY) // конструктор класс
 {
 	Visible = false; // по умолчанию Видимость False
 } // Point
-
+Point::Point(int InitX, int InitY, bool InitVisible) : Location(InitX, InitY) {
+	Visible = InitVisible; // задаем нужный параметр видимости
+}
 Point::~Point(void)   //формально пустое тело
 {
 } // ~Point
